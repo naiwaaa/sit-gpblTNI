@@ -1,0 +1,119 @@
+slots:
+  level:
+    type: text
+  Floo:
+    type: categorical
+    values:
+      - terrible cold
+      - flu
+      - high fever
+      - sick
+      - ill
+      - coughing
+      - serious cold
+  Headache:
+    type: categorical
+    values:
+      - headache
+      - migraine
+      - sore head
+      - terrible headache
+      - head 
+  Stomachache:
+    type: categorical
+    values:
+      - stomachache
+      - stomach
+  Ambulance:
+    type: categorical
+    values:
+      - ambulance
+      - hospital wagon
+      - mobile hospital
+      - red cross truck
+      - sick transport
+      - paramedics
+      - injuries
+      - paramedics station
+      - paramedics department
+
+entities:
+  - level
+  
+intents:
+  - greet
+  - need_help
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - health_stomachache
+  - health_headache
+  - health_floo
+  - pain_level
+  - emergency_ambulance
+
+actions:
+  - utter_greet
+  - utter_need_help
+  - utter_affirm
+  - utter_deny
+  - utter_great
+  - utter_unhappy
+  - utter_stomachache
+  - utter_headache
+  - utter_floo	
+  - utter_schedule
+  - utter_emergency_ambulance
+  
+templates:
+  utter_greet:
+    - text: "Hey! How are you?"
+    - text: "How do you feel today?"
+    - text: "Hello! May I help you?"
+    
+  utter_need_help:
+    - text: "I'm worried. What's up?"
+    - text: "What's wrong with you?"
+    - text: "Let me know what you need."
+
+  utter_affirm:
+    - text: "OK. Hope you will get better."
+    - text: "I made the appointment."
+  
+  utter_deny:
+    - text: "I'll reschedule. How about ABC hospital at 11am tomorrow?"
+    - text: "OK. Are you available ABC hospital at 11am tomorrow?"
+    - text: "I see. Can you go to ABC hospital at 11am tomorrow?"
+
+  utter_great:
+    - text: "Great carry on!"
+    - text: "I'm happy to hear that."
+    - text: "Sounds great."
+  
+  utter_unhappy:
+    - text: "Sounds bad."
+    - text: "Be patient, Can you tell me how bad it is?"
+    
+  utter_stomachache:
+    - text: "On a scale of 1 to 10, how would you rate your pain?"
+    - text: "Which part hurts?"
+    - text: "From when do you hurt?"
+      
+  utter_headache:
+    - text: "On a scale of 1 to 10, how would you rate your pain?"
+    - text: "How do you hurt?"
+    - text: "From when do you hurt?"
+
+  utter_schedule:
+    - text: "How about ABC hospital at 3pm today?"
+    - text: "I can reserve ABC hospital at 3pm today."
+    - text: "I can make appointment ABC hospital at 3pm today."
+
+  utter_floo:
+    - text: "Do you have a fever?"
+    - text: "Do you have a cough?"
+     
+  utter_emergency_ambulance:
+    - text: "I called an ambulance."
+    - text: "Ambulance will be here soon."

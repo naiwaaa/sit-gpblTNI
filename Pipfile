@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+flake8-docstrings = "*"
+flake8-rst-docstrings = "*"
+pylint = "*"
+black = "==19.3b0"
+pre-commit = "*"
+
+[requires]
+python_version = "3.6"
+
+[packages]
+speechrecognition = "*"
+gtts = "*"
+pyaudio = "*"
+tensorflow-gan = "==1.0.0.dev0"
+rasa = "*"
+spacy = "*"

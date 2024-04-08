@@ -1,0 +1,142 @@
+%YAML 1.1
+---
+actions:
+- utter_affirm
+- utter_deny
+- utter_emergency_ambulance
+- utter_floo
+- utter_great
+- utter_greet
+- utter_headache
+- utter_need_help
+- utter_schedule
+- utter_stomachache
+- utter_unhappy
+config:
+  store_entities_as_slots: true
+entities:
+- level
+forms: []
+intents:
+- greet:
+    ignore_entities: []
+    use_entities: true
+- need_help:
+    ignore_entities: []
+    use_entities: true
+- affirm:
+    ignore_entities: []
+    use_entities: true
+- deny:
+    ignore_entities: []
+    use_entities: true
+- mood_great:
+    ignore_entities: []
+    use_entities: true
+- mood_unhappy:
+    ignore_entities: []
+    use_entities: true
+- health_stomachache:
+    ignore_entities: []
+    use_entities: true
+- health_headache:
+    ignore_entities: []
+    use_entities: true
+- health_floo:
+    ignore_entities: []
+    use_entities: true
+- pain_level:
+    ignore_entities: []
+    use_entities: true
+- emergency_ambulance:
+    ignore_entities: []
+    use_entities: true
+slots:
+  Ambulance:
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.CategoricalSlot
+    values:
+    - ambulance
+    - hospital wagon
+    - mobile hospital
+    - red cross truck
+    - sick transport
+    - paramedics
+    - injuries
+    - paramedics station
+    - paramedics department
+  Floo:
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.CategoricalSlot
+    values:
+    - terrible cold
+    - flu
+    - high fever
+    - sick
+    - ill
+    - coughing
+    - serious cold
+  Headache:
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.CategoricalSlot
+    values:
+    - headache
+    - migraine
+    - sore head
+    - terrible headache
+    - head
+  Stomachache:
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.CategoricalSlot
+    values:
+    - stomachache
+    - stomach
+  level:
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.TextSlot
+templates:
+  utter_affirm:
+  - text: OK. Hope you will get better.
+  - text: I made the appointment.
+  utter_deny:
+  - text: I'll reschedule. How about ABC hospital at 11am tomorrow?
+  - text: OK. Are you available ABC hospital at 11am tomorrow?
+  - text: I see. Can you go to ABC hospital at 11am tomorrow?
+  utter_emergency_ambulance:
+  - text: I called an ambulance.
+  - text: Ambulance will be here soon.
+  utter_floo:
+  - text: Do you have a fever?
+  - text: Do you have a cough?
+  utter_great:
+  - text: Great carry on!
+  - text: I'm happy to hear that.
+  - text: Sounds great.
+  utter_greet:
+  - text: Hey! How are you?
+  - text: How do you feel today?
+  - text: Hello! May I help you?
+  utter_headache:
+  - text: On a scale of 1 to 10, how would you rate your pain?
+  - text: How do you hurt?
+  - text: From when do you hurt?
+  utter_need_help:
+  - text: I'm worried. What's up?
+  - text: What's wrong with you?
+  - text: Let me know what you need.
+  utter_schedule:
+  - text: How about ABC hospital at 3pm today?
+  - text: I can reserve ABC hospital at 3pm today.
+  - text: I can make appointment ABC hospital at 3pm today.
+  utter_stomachache:
+  - text: On a scale of 1 to 10, how would you rate your pain?
+  - text: Which part hurts?
+  - text: From when do you hurt?
+  utter_unhappy:
+  - text: Sounds bad.
+  - text: Be patient, Can you tell me how bad it is?

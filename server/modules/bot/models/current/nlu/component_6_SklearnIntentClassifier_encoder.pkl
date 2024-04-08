@@ -1,0 +1,1 @@
+{"dtype": "<U19", "py/object": "numpy.ndarray", "values": ["affirm", "deny", "emergency_ambulance", "greet", "health_floo", "health_headache", "health_stomachache", "mood_great", "mood_unhappy", "need_help", "pain_level"]}
